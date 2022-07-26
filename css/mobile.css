@@ -1,0 +1,139 @@
+.app {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.25em;
+  margin-left: -110%;
+  z-index: 999;
+  display: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+@media screen and (max-width: 1024px) {
+  .app {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .app {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+.app.mobileActive {
+  margin-left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+@media screen and (max-width: 767px) {
+  .app.mobileActive {
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+}
+.app .sidebar {
+  position: absolute;
+  top: 0;
+  width: 17em;
+  height: 100%;
+  overflow: hidden;
+  background-color: #19222a;
+  -webkit-transform: translateZ(0);
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.app .sidebar div {
+  background-color: #00b050;
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em 1em 0.75em 1em;
+}
+.app .sidebar div i {
+  position: relative;
+  left: 70%;
+  cursor: pointer;
+  font-size: 1.25em;
+  margin-top: -0.2em;
+}
+.app .sidebar div i:hover {
+  opacity: 0.5;
+}
+.app .sidebar .sidebar-nav {
+  position: fixed;
+  background-color: #19222a;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1.2em;
+  overflow: auto;
+  padding-bottom: 6em;
+  z-index: 9;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.app .sidebar .sidebar-nav ul {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.app .sidebar .sidebar-nav ul > li:hover .nav-flyout {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.app .sidebar .sidebar-nav ul li {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  width: 100%;
+}
+.app .sidebar .sidebar-nav ul li a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75em;
+  padding: 1.05em 1em;
+  display: block;
+}
+.app .sidebar .sidebar-nav ul li a:hover {
+  background-color: #00b050;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.app .sidebar .sidebar-nav ul li a::after {
+  position: absolute;
+  top: 45%;
+  content: "";
+  font-family: ionicons;
+  font-size: 0.5em;
+  width: 10px;
+  color: #fff;
+  right: 0.75em;
+}
+.app .sidebar .sidebar-nav ul li a i {
+  font-size: 1.8em;
+  padding-right: 0.5em;
+  width: 9em;
+  display: inline;
+  vertical-align: -3px;
+}
+.app .sidebar .sidebar-nav ul li .nav-flyout {
+  position: absolute;
+  top: 0;
+  left: 2.5em;
+  background-color: #080D11;
+  z-index: 9;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.app .sidebar .sidebar-nav ul li .nav-flyout li a :hover {
+  background-color: #00b050;
+}

@@ -1,0 +1,194 @@
+.container {
+    background-image: url(../img/coffee.jpg);
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 5%;
+}
+.container>h1 {
+    text-align: center;
+    padding-top: 200px;
+    color: #fff;
+    font-size: 2em;
+}
+.signupBox h3 {
+    color: #333;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 20px 0;
+}
+.signupBox p {
+    line-height: 1.2;
+    font-size: 1em;
+    color: #333;
+    font-weight: 400;
+}
+.signupBox span {
+    color: #006633;
+}
+.signup {
+    max-width: 600px;
+    margin: 50px auto 150px auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.singupImg {
+    padding: 50px 0 40px;
+    border-bottom: 1px solid #ccc;
+}
+.singupImg>img {
+    max-width: 200px;
+}
+.singupImg>p {
+    padding-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 700;
+}
+.first {
+    padding-top: 20px;
+}
+
+/* SMS */
+.SMS {
+    width: 90%;
+    margin: 0 auto;
+}
+.SMS>h3 {
+    padding: 15px 0;
+}
+.SMS>p {
+    text-align: left;
+    padding: 5px 0;
+}
+.SMS>.choice {
+    text-align: left;
+    padding: 5px 0;
+}
+.switch {
+    transform: translateY(75%);
+    float: right;
+    position: relative;
+    display: inline-block;
+}
+.switch-input {
+    display: none;
+}
+.switch-label {
+    display: block;
+    width: 48px;
+    height: 24px;
+    text-indent: -150%;
+    clip: rect(0 0 0 0);
+    color: transparent;
+    user-select: none;
+}
+.switch-label::before,
+.switch-label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+.switch-label::before {
+    width: 100%;
+    height: 100%;
+    background-color: #dedede;
+    border-radius: 9999em;
+    -webkit-transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease;
+}
+.switch-label::after {
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+    -webkit-transition: left 0.25s ease;
+    transition: left 0.25s ease;
+}
+.switch-input:checked+.switch-label::before {
+    background-color: #006633;
+}
+.switch-input:checked+.switch-label::after {
+    left: 24px;
+}
+
+/* 회원가입 유의사항 */
+.explain {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+.explain>h3 {
+    padding: 15px 0 10px;
+}
+.explain>p {
+    padding: 5px 0;
+}
+
+/* 인증방식 선택 */
+.certification {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px 0 20px;
+}
+.certification>h3 {
+    padding-bottom: 20px;
+}
+.certification_Box {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+.certification_Box>div {
+    width: 50%;
+}
+.certification_Box>div:first-child {
+    border-right: 2px solid #ccc;
+}
+.certification_Box>div>.ImgBox {
+    height: 50%;
+}
+.certification_Box>div>.TextBox {
+    height: 50%;
+}
+.certification_Box>div>.TextBox>h4 {
+    font-size: 1.2em;
+    color: #333;
+}
+.certification_Box>div>.TextBox>p {
+    font-size: .9em;
+    font-weight: 500;
+    color: #333;
+    padding: 10px 0 20px;
+}
+.certification_Box>div>.TextBox>span {
+    background-color: #006633;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+.certification_Box>div>.TextBox>span:hover>a {
+    opacity: .7;
+    text-decoration: underline;
+}
+.certification_Box>div>.TextBox>span>a {
+    font-size: 1em;
+    color: #fff;
+}
+
+@media screen and (max-width: 767px){
+    .container>h1 {
+        padding-top: 125px;
+    }
+    .signup {
+        width: 95%;
+    }
+    .signupBox h3 {
+        font-size: 1.4em;
+    }
+}

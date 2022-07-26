@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Starbucks">
+    <meta property="og:url"	content="https://www.starbucks.co.kr/">
+    <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
+    <meta property="og:description" content="Starbucks">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STARBUCKS Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/link.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <ul class="skipMenu">
+        <li><a href="#nav">메인메뉴 바로가기</a></li>
+        <li><a href=".container">본문 바로가기</a></li>
+    </ul>
+    <div class="app"></div>
+    <header id="header" class="clearFix"></header>
+    <section class="container">
+        <h1>로그인</h1>
+        <div class="login">
+            <div class="logInnerBox">
+                <div class="introduce">Welcome! 스타벅스에 오신 것을 환영합니다.</div>
+                <form action="#void" method="post">
+                    <div class="input-box">
+                        <input type="text" id="username" name="username" placeholder="아이디를 입력해주세요.">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" name="password" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+                    <div class="remember">
+                        <div class="switch clearFix">
+                            <input id="switch-1" type="checkbox" class="switch-input" />
+                            <label for="switch-1" class="switch-label">아이디 저장</label>
+                        </div>
+                        <p>아이디 저장</p>
+                    </div>
+                    <div class="submit">
+                        <input type="reset" value="로그인">
+                    </div>
+                </form>
+                <ul class="explain">
+                    <li>* 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.</li>
+                    <li>* 스타벅스 코리아의 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</li>
+                </ul>
+                <ul class="login_search">
+                    <li><a href="signup.html">회원가입</a></li>
+                    <li><a href="Idsearch.html">아이디 찾기</a></li>
+                    <li><a href="password.html">비밀번호 찾기</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer id="footer" class="clearFix"></footer>
+    <div id="search" class="active"></div>
+    <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jqFuwatto.umd.js"></script>
+    <script src="js/loading.js"></script>
+</body>
+</html>

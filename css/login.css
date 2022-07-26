@@ -1,0 +1,179 @@
+.container {
+    background-image: url(../img/coffee.jpg);
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 1%;
+}
+.container>h1 {
+    text-align: center;
+    padding-top: 200px;
+    color: #fff;
+    font-size: 2em;
+}
+.login {
+    max-width: 600px;
+    margin: 50px auto 150px auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* 소개 */
+.introduce {
+    padding: 40px 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+
+/* 아이디 박스 비밀번호 박스 */
+.input-box {
+    padding-top: 20px;
+}
+.input-box>input {
+    width: calc(90% - 20px);
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* 아이디 저장 */
+.remember {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.remember>p {
+    color: #006633;
+    font-weight: 500;
+    font-size: 1em;
+    margin: auto 0;
+    padding-left: 5px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+}
+.switch-input {
+    display: none;
+}
+.switch-label {
+    display: block;
+    width: 48px;
+    height: 24px;
+    text-indent: -150%;
+    clip: rect(0 0 0 0);
+    color: transparent;
+    user-select: none;
+}
+.switch-label::before,
+.switch-label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+.switch-label::before {
+    width: 100%;
+    height: 100%;
+    background-color: #dedede;
+    border-radius: 9999em;
+    -webkit-transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease;
+}
+.switch-label::after {
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+    -webkit-transition: left 0.25s ease;
+    transition: left 0.25s ease;
+}
+.switch-input:checked+.switch-label::before {
+    background-color: #006633;
+}
+.switch-input:checked+.switch-label::after {
+    left: 24px;
+}
+
+/* 로그인 버튼 */
+.submit>input {
+    border: none;
+    border-radius: 3px;
+    width: 90%;
+    height: 60px;
+    font-size: 1.5em;
+    background-color: #006633;
+    color: #fff;
+    font-weight: 500;
+    transition: .5s;
+    cursor: pointer;
+}
+.submit>input:hover {
+    opacity: .9;
+    text-decoration: underline;
+}
+
+/* 설명부분 */
+.explain {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px 0;
+}
+.explain>li {
+    padding: 5px 0;
+}
+
+/* 로그인 하단 부분 */
+.login_search {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.login_search>li {
+    width: calc(100%/3);
+    float: left;
+}
+.login_search>li:hover>a {
+    text-decoration: underline;
+    color: #006633;
+}
+.login_search>li::after {
+    content: "|";
+    float: right;
+    color: #ccc;
+}
+.login_search>li:last-child::after {
+    content: "";
+}
+.login_search>li>a {
+    font-size: 1.25em;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding-bottom: 20%;
+    }
+    .container>h1 {
+        padding-top: 125px;
+    }
+    .login {
+        width: 95%;
+        margin: 50px auto;
+    }
+    .submit>input {
+        height: 50px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .submit>input {
+        border-radius: 1px;
+    }
+}

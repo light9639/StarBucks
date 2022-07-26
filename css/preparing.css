@@ -1,0 +1,83 @@
+#container {
+    width: 100%;
+    height: 875px;
+    background-image: url(../img/coffee.jpg);
+    background-size: cover;
+}
+#container>.preparingBox {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#container>.preparingBox>.ImgBox {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 98%;
+    position: relative;
+    top: 50%;
+    transform: translateY(30%);
+}
+
+#container>.preparingBox>.ImgBox>img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+#container>.preparingBox>.TextBox {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    margin-top: -175px;
+    transform: translateX(-50%);
+}
+#container>.preparingBox>.TextBox>p {
+    font-size: 2em;
+    color: #fff;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+#container>.preparingBox>.TextBox>h2 {
+    font-size: 3em;
+    color: #fff;
+}
+@media screen and (max-width:1024px) {
+    #container>.preparingBox>.TextBox {
+        margin-top: -100px;
+    }
+    #container>.preparingBox>.TextBox>p {
+        font-size: 1.5em;
+    }
+    #container>.preparingBox>.TextBox>h2 {
+        font-size: 2em;
+    }
+    #container>.preparingBox>.ImgBox>img {
+        margin-top: 75px;
+    }
+}
+@media screen and (max-width:767px) {
+    #container {
+        padding-bottom: 50%;
+        height: 100%;
+    }
+    #container>.preparingBox>.TextBox {
+        margin-top: -65px;
+    }
+    #container>.preparingBox>.TextBox>p {
+        font-size: 1.5em;
+    }
+    #container>.preparingBox>.TextBox>h2 {
+        font-size: 2em;
+    }
+    #container>.preparingBox>.ImgBox {
+        width: 95%;
+    }
+}
+@media screen and (max-width:540px) {
+    #container>.preparingBox>.TextBox>p {
+        font-size: 1.25em;
+    }
+    #container>.preparingBox>.TextBox>h2 {
+        font-size: 1.75em;
+    }
+}

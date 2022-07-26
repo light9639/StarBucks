@@ -1,0 +1,403 @@
+$메인컬러: #f6f5ef;
+$로그인컬러: #1e3932;
+$링크서브: #00b050;
+$설명글자: #666;
+$제목글자: 24px;
+$기본글자: 14px;
+
+$pc2000: 2000px;
+$pc1560: 1560px;
+$pc1420: 1420px;
+$pc1024: 1024px;
+$mobile767: 767px;
+$mobile480: 480px;
+
+//position mixin
+@mixin pos($p:absolute, $top:null, $right:null, $bottom:null, $left:null) {
+    position: $p;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+//respond mixin
+@mixin respond($size) {
+    @media screen and (max-width:$size) {
+        @content;
+    }
+}
+body {
+    background-color: #f6f5ef;
+    @include respond($mobile767) {
+        font-size: 12px;
+    }
+}
+.innerBox {
+    max-width: $pc1420;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+// header
+header {
+    @include pos($p:fixed);
+    width: 100%;
+    padding-top: 10px;
+    z-index: 100;
+    transition: all 0.6s ease;
+    @include respond($pc1024) {
+        padding: 10px 0;
+    }
+    &:hover>.innerBox>.main-menu>.item>.item_name>a {
+        color: #333;
+    }
+    &.sticky {
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10px 0;
+        &>.innerBox>nav>#nav>li>a {
+            color: #333;
+        }
+        &>.innerBox>.mobileheader>a, &>.innerBox>.mobileheader>div>a, &>.innerBox>.main-menu>.item>.item_name>a, &>.innerBox>.main-menu>.headerIcon>a {
+            color: #333;
+        }
+        &>.innerBox>.main-menu>.item>.item_name {
+            padding: 27.5px 15px 22.5px;
+        }
+        &>.innerBox>.main-menu>.item>.item_contents {
+            top: 95px;
+        }
+        &>.innerBox>.header_UserBox {
+            top: 75px;
+        }
+        &>.innerBox>.mobileheader>.Mobile_UserBox {
+            top: 50px;
+        }
+    }
+    &:hover {
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    &:hover>.innerBox>nav>#nav>li>a, &:hover>.innerBox>.mobileheader>a, &:hover>.innerBox>.mobileheader>div>a, &:hover>.innerBox>.main-menu>.item>.item_name, &:hover>.innerBox>.main-menu>.headerIcon>a{
+        color: #333;
+    }
+    .innerBox {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        .mobileheader {
+            display: none;
+            @include respond($pc1024) {
+                display: flex;
+                width: 95%;
+                margin: 0 auto;
+                justify-content: space-between;
+            }
+            a {
+                margin: auto 0;
+                color: #fff;
+                font-size: 2em;
+                transition: all 0.6s ease;
+                &:hover {
+                    color: $링크서브;
+                }
+                i {
+
+                }
+            }
+            a {
+                &:hover>img {
+                    opacity: .75;
+                }
+                img {
+                    @include pos($p:relative);
+                    width: 50px;
+                    transform: translateX(75%);
+                }
+            }
+            .MobileIcon {
+                margin: auto 0;
+                a {
+                    padding-left: 5px;
+                    &:hover {
+                        color: $링크서브;
+                    }
+                }
+                .Icon_last {
+                    padding-bottom: 30px;
+                }
+            }
+            .Mobile_UserBox {
+                @include pos($p:fixed, $top:70px, $right:3%);
+                width: 200px;
+                background-color: #fff;
+                border-radius: 0 0 5px 5px;
+                text-indent: 20px;
+                padding: 15px 0;
+                visibility: hidden;
+                transition: 0.5s;
+                @include respond($mobile767) {
+                    width: 175px;
+                }
+                a {
+                    padding: 5px 0;
+                    display: flex;
+                    font-size: 1em;
+                    color: #333;
+                    font-weight: 500;
+                    &:hover {
+                        color: $링크서브;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .bg {
+                visibility: visible;
+            }
+        }
+        .logo {
+            padding-left: 20px;
+            width: 75px;
+            @include respond($pc1024) {
+                display: none;
+            }
+            &:hover {
+                opacity: .75;
+            }
+        }
+        img {
+            width: 100%;
+        }
+        .main-menu {
+            @include pos($p:relative);
+            width: 90%;
+            margin: auto 0;
+            display: flex;
+            justify-content: space-between;
+            @include respond($pc1024) {
+                display: none;
+            }
+            &>.item>.item_name>a, &>.headerIcon>a {
+                color: #fff;
+            }
+            .item {
+                .item_name {
+                    padding: 27.5px 15px 32.5px;
+                    @include respond($pc1420) {
+                        padding-right: 0px;
+                    }
+                    >a {
+                        font-size: 20px;
+                        font-weight: 600;
+                        font-family: 'Lato', sans-serif;
+                        &:hover {
+                            color: $링크서브;
+                            text-decoration: underline;
+                        }
+                    }
+                    .contents_first .inner li:last-child {
+                        padding-left: 1px;
+                    }
+                    .item_contents {
+                        @include pos($p:fixed, $top:95px, $left:0);
+                        width: 100%;
+                        margin: 0 auto;
+                        display: none;
+                        .contents_menu {
+                            background-color:#1e3932;
+                            >.inner {
+                                max-width: 1100px;
+                                margin: 0 auto;
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+                                padding: 20px 0;
+                                @include respond($pc1420) {
+                                    padding-left: 2%;
+                                }
+                                >li {
+                                    width: calc(100%/6);
+                                    h4 {
+                                        padding: 3px 0 12px 0;
+                                        &:hover>a {
+                                            text-decoration: underline;
+                                        }
+                                        a {
+                                            font-size: 16px;
+                                            color: $링크서브;
+                                        }
+                                    }
+                                    ul {
+                                        li {
+                                            padding: 2px 0px;
+                                            cursor: pointer;
+                                            &:hover>a {
+                                                text-decoration: underline;
+                                                color: $링크서브;
+                                            }
+                                            @include respond($pc1420) {
+                                                padding: 0;
+                                            }
+                                            a {
+                                                font-size: 14px;
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .contents_texture {
+                            padding: 20px 0;
+                            font-size: 16px;
+                            border-top: 1px solid #fff;
+                            background-color: #1e3932;
+                            .inner {
+                                max-width: 1100px;
+                                margin: 0 auto;
+                                @include respond($pc1420) {
+                                    padding-left: 1%;
+                                }
+                                h4 {
+                                    &:hover>a {
+                                        text-decoration: underline;
+                                    }
+                                    a {
+                                        color: $링크서브;
+                                        font-weight: 700;
+                                    }
+                                }
+                                p {
+                                    padding-top: 5px;
+                                    font-size : 14px;
+                                    margin: 4px 0 14px;
+                                    &:hover>a {
+                                        text-decoration: underline;
+                                        color: $링크서브;
+                                    }
+                                    a {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .headerIcon {
+                margin-top: 22.5px;
+                a {
+                    font-size: 1.75em;
+                    padding-left: 5px;
+                    &:hover {
+                        color: $링크서브;
+                    }
+                }`
+                .Icon_last {
+                    padding-bottom: 15px;
+                }
+            }
+        }
+        .header_UserBox {
+            @include pos($p:fixed, $top:95px, $left:50%);
+            margin-left: 720px;
+            transform: translateX(-100%);
+            width: 200px;
+            background-color: #fff;
+            border-radius: 0 0 5px 5px;
+            text-indent: 20px;
+            padding: 20px 0;
+            visibility: hidden;
+            transition: 0.5s;
+            @include respond($pc1420) {
+                left: 100%;
+                margin-left: 0;
+            }
+            @include respond($pc1024) {
+                margin-left: 9999px;
+            }
+            a {
+                padding: 5px 0;
+                display: flex;
+                font-size: 1em;
+                color: #333;
+                font-weight: 500;
+                &:hover {
+                    color: $링크서브;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .bg1 {
+            visibility: visible;
+        }
+    }
+}
+
+// search
+#search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    transition: all .5s;
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+    .search-header {
+        height: 95px;
+        background: #fff;
+        display: flex;
+        @include respond($pc1024){
+            height: 70px;
+        }
+        form {
+            flex: 1;
+            input {
+                height: 95px;
+                padding: 30px 35px;
+                padding-right: 0 !important;
+                outline: none;
+                border: 0;
+                border-radius: 0;
+                appearance: none;
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 20px;
+                font-weight: 600;
+                @include respond($pc1024){
+                    height: 70px;
+                    padding: 18px 25px;
+                    font-size: 18px;
+                }
+            }
+        }
+        .btn-close {
+            width: 90px;
+            height: 90px;
+            cursor: pointer;
+            background: url(../img/icon-x.svg) 50% 50% no-repeat;
+            display: block;
+            text-indent: -999em;
+            overflow: hidden;
+            @include respond($pc1024){
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
+#search.active {
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    .search-header {
+        transform: translateY(0);
+        transition-delay: .2s;
+    }
+}
