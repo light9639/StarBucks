@@ -522,6 +522,7 @@ header {
 #mainBanner {
     margin: 0 auto;
     .innerBox {
+        width: 100%;
         max-width: 100vw;
         margin: 0 auto;
         .img {
@@ -635,7 +636,7 @@ header {
                 // background-color: #fff;
                 width: 100px;
                 height: 100px;
-                fill: #fff;
+                // fill: #fff;
                 cursor: pointer;
                 &:hover path {
                     transition: .5s;
@@ -647,7 +648,7 @@ header {
                     height: 25px;
                 }
                 path {
-
+                    stroke: #fff;
                 }
             }
         }
@@ -1106,7 +1107,6 @@ header {
                     .event_img {
                         overflow: hidden;
                         &:hover img{
-                            transform: scale(0.95);
                             opacity: .75;
                         }
                         img {
@@ -1116,6 +1116,9 @@ header {
                         }
                     }
                     .event_text {
+                        &:hover {
+                            color: $링크서브;
+                        }
                         p {
                             margin-top: 10px;
                             font-size: 18px;
