@@ -1237,27 +1237,39 @@ header {
         z-index: 2;
         .innerBox {
             // height: 650px;
-            z-index: 1000;
+            // z-index: 1000;
+            padding-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1800px;
             .title {
                 margin: {
-                    top: 75px;
-                    right: 30px;
+                    top: 150px;
+                    // right: 30px;
                 }
-                text-align: center;
+                text-align: left;
                 h2 {
                     color: #fff;
-
                 }
                 p {
                     color: #fff;
-
+                    a {
+                        color: #fff;
+                        border: 1px solid #fff;
+                        padding: 15px 30px;
+                        border-radius: 10px;
+                        font: {
+                            weight: 500;
+                            size: 20px;
+                        }
+                    }
                 }
             }
             .videoCenter {
                 padding-bottom: 100px;
                 video {
                     max-width: 1420px;
-                    width: 100%;
+                    width: 90%;
                     border-radius: 10px;
                     @include respond($pc1420) {
                         width: 98%;
@@ -1281,20 +1293,6 @@ header {
                 //     }
                 // }
             }
-            // a {
-            //     @include pos($p:absolute);
-            //     bottom: 100px;
-            //     // left: 0;
-            //     span {
-            //         border: 1px solid #fff;
-            //         padding: 15px 30px;
-            //         color: #fff;
-            //         font: {
-            //             weight: 500;
-            //             size: 20px;
-            //         }
-            //     }
-            // }
         }
     }
 
