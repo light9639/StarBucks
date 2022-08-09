@@ -558,17 +558,16 @@ header .innerBox .bg1 {
 }
 #mainBanner .innerBox .img a img {
   width: 100%;
-  min-height: 900px;
+  min-height: 800px;
 }
 @media screen and (max-width: 1024px) {
   #mainBanner .innerBox .img a img {
-    max-height: 900px;
+    max-height: 800px;
     width: auto;
   }
 }
 @media screen and (max-width: 767px) {
   #mainBanner .innerBox .img a img {
-    max-height: 800px;
     -webkit-transform: translateX(-25%);
             transform: translateX(-25%);
   }

@@ -540,13 +540,12 @@ header {
             a {
                 img {
                     width: 100%;
-                    min-height: 900px;
+                    min-height: 800px;
                     @include respond($pc1024) {
-                        max-height: 900px;
+                        max-height: 800px;
                         width: auto;
                     }
                     @include respond($mobile767) {
-                        max-height: 800px;
                         transform: translateX(-25%);
                     }
                 }
