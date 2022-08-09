@@ -558,18 +558,19 @@ header .innerBox .bg1 {
 }
 #mainBanner .innerBox .img a img {
   width: 100%;
-  min-height: 800px;
+  min-height: 900px;
 }
 @media screen and (max-width: 1024px) {
   #mainBanner .innerBox .img a img {
-    max-height: 800px;
+    max-height: 900px;
     width: auto;
   }
 }
 @media screen and (max-width: 767px) {
   #mainBanner .innerBox .img a img {
-    -webkit-transform: translateX(-40%);
-            transform: translateX(-40%);
+    max-height: 800px;
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
   }
 }
 #mainBanner .innerBox .img .slick-dots {
@@ -673,6 +674,11 @@ header .innerBox .bg1 {
   top: 45%;
   z-index: 100;
 }
+@media screen and (max-width: 1420px) {
+  #mainBanner .main_indicator div {
+    top: 37.5%;
+  }
+}
 #mainBanner .main_indicator div svg {
   width: 100px;
   height: 100px;
@@ -683,11 +689,10 @@ header .innerBox .bg1 {
   transition: 0.5s;
   opacity: 0.5;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1420px) {
   #mainBanner .main_indicator div svg {
-    padding: 12.5px 5px;
-    width: 25px;
-    height: 25px;
+    width: 75px;
+    height: 75px;
   }
 }
 #mainBanner .main_indicator div svg path {
@@ -984,6 +989,11 @@ header .innerBox .bg1 {
     margin-right: auto;
   }
 }
+@media screen and (max-width: 767px) {
+  #container .lifeStyle {
+    width: 100%;
+  }
+}
 #container .lifeStyle .innerBox {
   max-width: 1500px;
 }
@@ -1020,8 +1030,28 @@ header .innerBox .bg1 {
 #container .lifeStyle .innerBox .Style_box .Style_text1 {
   font-size: 1.5em;
 }
+@media screen and (max-width: 1024px) {
+  #container .lifeStyle .innerBox .Style_box .Style_text1 {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container .lifeStyle .innerBox .Style_box .Style_text1 {
+    font-size: 1.5em;
+  }
+}
 #container .lifeStyle .innerBox .Style_box .Style_text2 {
   font-size: 2em;
+}
+@media screen and (max-width: 1024px) {
+  #container .lifeStyle .innerBox .Style_box .Style_text2 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container .lifeStyle .innerBox .Style_box .Style_text2 {
+    font-size: 2em;
+  }
 }
 #container .lifeStyle .innerBox .Style_box .Style_text1, #container .lifeStyle .innerBox .Style_box .Style_text2 {
   padding-bottom: 10px;
@@ -1029,7 +1059,7 @@ header .innerBox .bg1 {
   font-weight: 500;
 }
 #container .lifeStyle .innerBox .Style_box > .Style_box1 > .Style_img, #container .lifeStyle .innerBox .Style_box > .Style_box2 > .Style_img {
-  border-radius: 50px;
+  border-radius: 25px;
 }
 #container .lifeStyle .innerBox .Style_box .Style_box1 {
   padding-top: 0px;
@@ -1039,6 +1069,11 @@ header .innerBox .bg1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 1024px) {
+  #container .lifeStyle .innerBox .Style_box .Style_box1 {
+    padding-right: 0px;
+  }
 }
 @media screen and (max-width: 767px) {
   #container .lifeStyle .innerBox .Style_box .Style_box1 {
