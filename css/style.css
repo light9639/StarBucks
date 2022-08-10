@@ -1293,14 +1293,15 @@ header .innerBox .bg1 {
 #container .event .indicator .nextArrow {
   right: 0%;
 }
-#container .background {
+#container .Reward {
   width: 100%;
   position: relative;
   margin: 0 auto;
   margin-top: 325px;
   max-height: 800px;
+  overflow: hidden;
 }
-#container .background .gradient-block {
+#container .Reward .gradient-block {
   position: absolute;
   bottom: 0;
   height: 100%;
@@ -1313,7 +1314,7 @@ header .innerBox .bg1 {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
 }
-#container .background .video-contents {
+#container .Reward .video-contents {
   position: absolute;
   top: 0%;
   right: 50%;
@@ -1324,37 +1325,42 @@ header .innerBox .bg1 {
   text-align: center;
 }
 @media screen and (max-width: 1420px) {
-  #container .background .video-contents {
+  #container .Reward .video-contents {
     -webkit-transform: translate(50%, 5%);
             transform: translate(50%, 5%);
     padding-bottom: 25px;
     width: 98%;
   }
 }
-#container .background .video-contents img {
+#container .Reward .video-contents img {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
   width: 100%;
 }
-#container .background .video-contents h1 {
+@media screen and (max-width: 767px) {
+  #container .Reward .video-contents img {
+    width: 50%;
+  }
+}
+#container .Reward .video-contents h1 {
   margin-top: 25px;
 }
 @media screen and (max-width: 1024px) {
-  #container .background .video-contents h1 {
+  #container .Reward .video-contents h1 {
     font-size: 20px;
   }
 }
-#container .background .video-contents p {
+#container .Reward .video-contents p {
   font-size: 18px;
   line-height: 1.5;
 }
 @media screen and (max-width: 1024px) {
-  #container .background .video-contents p {
+  #container .Reward .video-contents p {
     font-size: 16px;
   }
 }
-#container .background .video-contents a {
+#container .Reward .video-contents a {
   padding: 8px 18px;
   font-size: 14px;
   color: #fff;
@@ -1362,40 +1368,40 @@ header .innerBox .bg1 {
   font-weight: 500;
 }
 @media screen and (max-width: 1024px) {
-  #container .background .video-contents a {
+  #container .Reward .video-contents a {
     font-size: 12px;
   }
 }
-#container .background .video-contents a:hover {
+#container .Reward .video-contents a:hover {
   opacity: 0.95;
 }
-#container .background .video-contents .span-group {
+#container .Reward .video-contents .span-group {
   margin-top: 30px;
   padding-bottom: 35px;
 }
-#container .background .video-contents .span-group .video-signup {
+#container .Reward .video-contents .span-group .video-signup {
   background-color: #00704a;
   border: 1px solid #00704a;
   margin-right: 10px;
 }
-#container .background .video-contents .span-group .video-login {
+#container .Reward .video-contents .span-group .video-login {
   border: 1px solid #fff;
 }
-#container .background .video-contents .span-group .video-login:hover {
+#container .Reward .video-contents .span-group .video-login:hover {
   background-color: #00704a;
   border: 1px solid #00704a;
 }
-#container .background .video-contents .video-bottom {
+#container .Reward .video-contents .video-bottom {
   padding-top: 25px;
   border-top: 1px solid #fff;
 }
-#container .background .video-contents .video-bottom .span-gift {
+#container .Reward .video-contents .video-bottom .span-gift {
   margin-top: 30px;
 }
-#container .background .video-contents .video-bottom .span-gift .video-gift {
+#container .Reward .video-contents .video-bottom .span-gift .video-gift {
   border: 1px solid #fff;
 }
-#container .background .video-contents .video-bottom .span-gift .video-gift:hover {
+#container .Reward .video-contents .video-bottom .span-gift .video-gift:hover {
   background-color: #00704a;
   border: 1px solid #00704a;
 }
