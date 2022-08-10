@@ -1326,9 +1326,6 @@ header .innerBox .bg1 {
 }
 @media screen and (max-width: 1420px) {
   #container .Reward .video-contents {
-    -webkit-transform: translate(50%, 5%);
-            transform: translate(50%, 5%);
-    padding-bottom: 25px;
     width: 98%;
   }
 }
@@ -1340,7 +1337,7 @@ header .innerBox .bg1 {
 }
 @media screen and (max-width: 767px) {
   #container .Reward .video-contents img {
-    width: 50%;
+    width: 75%;
   }
 }
 #container .Reward .video-contents h1 {
@@ -1349,6 +1346,11 @@ header .innerBox .bg1 {
 @media screen and (max-width: 1024px) {
   #container .Reward .video-contents h1 {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container .Reward .video-contents h1 {
+    font-size: 18px;
   }
 }
 #container .Reward .video-contents p {
@@ -1360,6 +1362,11 @@ header .innerBox .bg1 {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 767px) {
+  #container .Reward .video-contents p {
+    font-size: 14px;
+  }
+}
 #container .Reward .video-contents a {
   padding: 8px 18px;
   font-size: 14px;
@@ -1367,7 +1374,7 @@ header .innerBox .bg1 {
   border-radius: 5px;
   font-weight: 500;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   #container .Reward .video-contents a {
     font-size: 12px;
   }
