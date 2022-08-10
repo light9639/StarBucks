@@ -1188,127 +1188,96 @@ header {
         }
     }
 
-    // journey
-    // .journey {
-    //     width: 98%;
-    //     margin: {
-    //         left: auto;
-    //         right: auto;
-    //     }
-    //     .title {
-    //         h2 {
-    //             @include respond($pc1024) {
-    //                 padding-bottom: 0px;
-    //             }
-    //         }
-    //     }
-    //     .innerBox {
-    //         display: flex;
-    //         justify-content: space-between;
-    //         max-width: 2000px;
-    //         .journey_box {
-    //             border-radius: 10px;
-    //             margin: 0px 5px;
-    //             transition: .5s;
-    //             height: 100%;
-    //             overflow: hidden;
-    //             &:hover>a>img {
-    //                 transform: scale(1.25);
-    //             }
-    //             &:hover>.journey_textbox {
-    //                 margin-top: -30px;
-    //             }
-    //             a {
-    //                 width: 100%;
-    //                 overflow: hidden;
-    //                 img {
-    //                     transition: all 1s ease;
-    //                     width: 100%;
-    //                 }
-    //             }
-    //             .journey_textbox {
-    //                 @include pos($top:40%);
-    //                 transition: all 1s ease;
-    //                 transform: translateX(15%);
-    //                 p {
-    //                     font-weight: 500;
-    //                     color: #fff;
-    //                 }
-    //                 .journey_text1 {
-    //                     font-size: 1.5em;
-    //                     margin-bottom: 10px;
-    //                 }
-    //                 .journey_text2 {
-    //                     font-size: 2.25em;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-
-
     // background
     .background {
-        @include pos($p:relative);
-        background-color: $로그인컬러;
-        z-index: 2;
-        .innerBox {
-            // height: 650px;
-            // z-index: 1000;
-            padding-top: 100px;
-            display: flex;
-            justify-content: space-between;
-            max-width: 1800px;
-            .title {
-                margin: {
-                    top: 150px;
-                    // right: 30px;
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 325px;
+        max-height: 800px;
+        .gradient-block {
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            display: block;
+            z-index: 5;
+            background: linear-gradient(-270deg,transparent,rgba(0,0,0,.7));
+            opacity: .7;
+            transform: rotate(-180deg);
+        }
+        .video-contents {
+            position: absolute;
+            top: 0%;
+            right: 50%;
+            transform: translate(50%, 7.5%);
+            z-index: 10;
+            color: #fff;
+            text-align: center;
+            @include respond($pc1420) {
+                transform: translate(50%, 5%);
+                padding-bottom: 25px;
+                width: 98%;
+            }
+            img {
+                max-width: fit-content;
+                width: 100%;
+            }
+            h1 {
+                margin-top: 25px;
+                @include respond($pc1024) {
+                    font-size: 20px;
                 }
-                text-align: left;
-                h2 {
-                    color: #fff;
+            }
+            p {
+                font-size: 18px;
+                line-height: 1.5;
+                @include respond($pc1024) {
+                    font-size: 16px;
                 }
-                p {
-                    color: #fff;
-                    a {
-                        color: #fff;
-                        border: 1px solid #fff;
-                        padding: 15px 30px;
-                        border-radius: 10px;
-                        font: {
-                            weight: 500;
-                            size: 20px;
-                        }
+            }
+            a {
+                padding: 8px 18px;
+                font-size: 14px;
+                color: #fff;
+                border-radius: 5px;
+                font-weight: 500;
+                @include respond($pc1024) {
+                    font-size: 12px;
+                }
+                &:hover {
+                    opacity: .95;
+                }
+            }
+            .span-group {
+                margin-top: 30px;
+                padding-bottom: 35px;
+                .video-signup {
+                    background-color: #00704a;
+                    border: 1px solid #00704a;
+                    margin-right: 10px;
+                }
+                .video-login {
+                    border: 1px solid #fff;
+                    &:hover {
+                        background-color: #00704a;
+                        border: 1px solid #00704a;
                     }
                 }
             }
-            .videoCenter {
-                padding-bottom: 100px;
-                video {
-                    max-width: 1420px;
-                    width: 90%;
-                    border-radius: 10px;
-                    @include respond($pc1420) {
-                        width: 98%;
-                        margin-left: 1%;
+            .video-bottom {
+                padding-top: 25px;
+                border-top: 1px solid #fff;
+                .span-gift {
+                    margin-top: 30px;
+                    .video-gift {
+                        border: 1px solid #fff;
+                        &:hover {
+                            background-color: #00704a;
+                            border: 1px solid #00704a;
+                        }
                     }
-                    // height: 700px;
-
                 }
-                // video {
-                //     border-radius: 50px;
-                //     position: relative;
-                //     width: 50%;
-                //     left: 50%;
-                //     transform: translateX(-50%);
-                // }
-                // .videoControl {
-                //     a {
-                //         img {
-
-                //         }
-                //     }
-                // }
             }
         }
     }
