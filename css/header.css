@@ -44,7 +44,9 @@ header.sticky > .innerBox > .mobileheader > a, header.sticky > .innerBox > .mobi
   color: #333;
 }
 header.sticky > .innerBox > .main-menu > .item > .item_name {
-  padding: 27.5px 15px 22.5px;
+  padding-top: 27.5px;
+  padding-right: 15px;
+  padding-bottom: 22.5px;
 }
 header.sticky > .innerBox > .main-menu > .item > .item_contents {
   top: 95px;
@@ -136,13 +138,13 @@ header .innerBox .mobileheader .Mobile_UserBox {
   }
 }
 header .innerBox .mobileheader .Mobile_UserBox a {
+  font-size: 1em;
+  font-weight: 500;
   padding: 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1em;
   color: #333;
-  font-weight: 500;
 }
 header .innerBox .mobileheader .Mobile_UserBox a:hover {
   color: #00b050;
@@ -186,7 +188,9 @@ header .innerBox .main-menu > .item > .item_name > a, header .innerBox .main-men
   color: #fff;
 }
 header .innerBox .main-menu .item .item_name {
-  padding: 27.5px 15px 32.5px;
+  padding-top: 27.5px;
+  padding-right: 15px;
+  padding-bottom: 32.5px;
 }
 @media screen and (max-width: 1420px) {
   header .innerBox .main-menu .item .item_name {
@@ -235,10 +239,13 @@ header .innerBox .main-menu .item .item_name .item_contents .contents_menu > .in
   }
 }
 header .innerBox .main-menu .item .item_name .item_contents .contents_menu > .inner > li {
-  width: calc(100%/6);
+  width: 16.6666666667%;
 }
 header .innerBox .main-menu .item .item_name .item_contents .contents_menu > .inner > li h4 {
-  padding: 3px 0 12px 0;
+  padding-top: 3px;
+  padding-right: 0;
+  padding-bottom: 12px;
+  padding-left: 0px;
 }
 header .innerBox .main-menu .item .item_name .item_contents .contents_menu > .inner > li h4:hover > a {
   text-decoration: underline;
@@ -339,13 +346,13 @@ header .innerBox .header_UserBox {
   }
 }
 header .innerBox .header_UserBox a {
+  font-size: 1em;
+  font-weight: 500;
   padding: 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1em;
   color: #333;
-  font-weight: 500;
 }
 header .innerBox .header_UserBox a:hover {
   color: #00b050;

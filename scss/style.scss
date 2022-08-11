@@ -520,7 +520,6 @@ header {
 
 // mainbanner
 #mainBanner {
-    margin: 0 auto;
     .innerBox {
         width: 100%;
         max-width: 100vw;
@@ -542,8 +541,8 @@ header {
                     width: 100%;
                     min-height: 800px;
                     @include respond($pc1024) {
-                        max-height: 800px;
                         width: auto;
+                        max-height: 800px;
                     }
                     @include respond($mobile767) {
                         transform: translateX(-25%);
@@ -673,8 +672,10 @@ header {
             max-width: 1600px;
             @include respond($mobile767) {
                 width: 98%;
-                margin-left: auto;
-                margin-right: auto;
+                margin: {
+                    left: auto;
+                    right: auto;
+                }
             }
             @include respond($mobile767) {
                 margin-bottom: 0;
@@ -825,11 +826,11 @@ header {
                     display: block;
                 }
                 > li {
-                    background-repeat: no-repeat;
                     width: 370px;
                     height: 370px;
                     margin: 30px 15px;
                     border-radius: 100px;
+                    background-repeat: no-repeat;
                     &:first-child {
                         background-image: url(../img/BEST_01.jpg);
                     }
@@ -879,18 +880,18 @@ header {
                         text-align: right;
                     }
                     .arrow3 {
-                        text-indent: -9999px;
                         width: 110px;
                         border-top: 1px solid $링크서브;
                         transition: 0.5s;
+                        text-indent: -9999px;
                     }
                     .arrow4 {
-                        text-indent: -9999px;
                         width: 105px;
                         height: 20px;
                         border-left: 1px solid $링크서브;
                         transform: rotate(45deg) translateX(-5px) translateY(5px);
                         transition: 0.5s;
+                        text-indent: -9999px;
                     }
                 }
             }
@@ -901,8 +902,10 @@ header {
     .lifeStyle {
         @include respond($pc1420) {
             width: 98%;
-            margin-left: auto;
-            margin-right: auto;
+            margin: {
+                left: auto;
+                right: auto;
+            }
         }
         @include respond($mobile767) {
             width: 100%;
@@ -915,9 +918,9 @@ header {
                 }
             }
             .Style_box {
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
                 @include respond($mobile767){
                     display: block;
                 }
@@ -949,9 +952,9 @@ header {
                     }
                 }
                 .Style_text1, .Style_text2 {
-                    padding-bottom: 10px;
                     color: #fff;
                     font-weight: 500;
+                    padding-bottom: 10px;
                 }
                 & > .Style_box1 > .Style_img, & > .Style_box2 > .Style_img {
                     border-radius: 25px;
@@ -1044,22 +1047,6 @@ header {
                     color: #dddddd;
                 }
             }
-            .cold_text {
-                // padding-top: 75px;
-                // max-width: 431px;
-                // margin: 0 auto;
-                // text-align: center;
-                // @include respond($mobile767) {
-                //     width: 75%;
-                //     padding-bottom: 25px;
-                // }
-                // a {
-                //     cursor: auto;
-                //     img {
-                //         width: 100%;
-                //     }
-                // }
-            }
             .cold_pc_img {
                 display: flex;
                 justify-content: space-around;
@@ -1137,13 +1124,17 @@ header {
                             color: $링크서브;
                         }
                         p {
+                            font: {
+                                size: 18px;
+                                weight: 500;
+                            }
+                            text: {
+                                align: center;
+                                overflow: ellipsis;
+                            }
                             margin-top: 10px;
-                            font-size: 18px;
-                            font-weight: 500;
                             line-height: 1;
-                            text-align: center;
                             overflow: hidden;
-                            text-overflow: ellipsis;
                             white-space: nowrap;
                             @include respond($pc1024) {
                                 font-size: 16px;
@@ -1158,24 +1149,23 @@ header {
         }
         .indicator {
             div {
-                position: absolute;
-                top: 50%;
+                @include pos($p:absolute, $top: 50%);
                 svg {
-                    padding: 15px 5px;
-                    border-radius: 5px;
-                    background-color: rgba(0, 0, 0, 0.5);
                     width: 30px;
                     height: 30px;
                     fill: #fff;
+                    padding: 15px 5px;
+                    border-radius: 5px;
+                    background-color: rgba(0, 0, 0, 0.5);
                     cursor: pointer;
                     &:hover path {
-                        transition: .5s;
                         opacity: .5;
+                        transition: .5s;
                     }
                     @include respond($pc1024) {
-                        padding: 12.5px 2.5px;
                         width: 25px;
                         height: 25px;
+                        padding: 12.5px 2.5px;
                     }
                 }
             }
@@ -1190,39 +1180,69 @@ header {
 
     // Reward
     .Reward {
+        @include pos($p:relative);
+        margin: {
+            top: 325px;
+            right: auto;
+            bottom: 0px;
+            left: auto;
+        }
         width: 100%;
-        position: relative;
-        margin: 0 auto;
-        margin-top: 325px;
-        max-height: 800px;
         overflow: hidden;
+        max-height: 800px;
         .gradient-block {
-            position: absolute;
-            bottom: 0;
-            height: 100%;
-            width: 100%;
-            display: block;
+            @include pos($p:absolute, $bottom: 0);
             z-index: 5;
-            background: linear-gradient(-270deg,transparent,rgba(0,0,0,.7));
             opacity: .7;
+            width: 100%;
+            height: 100%;
+            display: block;
             transform: rotate(-180deg);
+            background: linear-gradient(-270deg,transparent,rgba(0,0,0,.7));
+        }
+        .video-stream {
+            display: none;
+            @include respond($pc2000) {
+                display: block;
+            }
+        }
+        .video-container {
+            @include pos($p: relative, $top: 0, $right: 0, $bottom: 0, $left: 0);
+            padding: {
+                top: 0;
+                bottom: 34.1%;
+            };
+            height: 0;
+            z-index: 1;
+            overflow: hidden;
+            @include respond($pc2000) {
+                display: none;
+            }
+            video {
+                @include pos($p:absolute, $top: -18%, $right: 0, $bottom: 0, $left: 0);
+                opacity: 1;
+                width: 100%;
+                height: 46.4vw;
+                transform: scale(1.05);
+            }
         }
         .video-contents {
-            position: absolute;
-            top: 0%;
-            right: 50%;
-            transform: translate(50%, 7.5%);
+            @include pos($p:absolute, $top: 0, $right: 50%);
             z-index: 10;
             color: #fff;
             text-align: center;
+            transform: translate(50%, 15%);
+            @include respond($pc2000) {
+                transform: translate(50%, 7.5%);
+            }
             @include respond($pc1420) {
                 width: 98%;
             }
             img {
-                max-width: fit-content;
                 width: 100%;
+                max-width: fit-content;
                 @include respond($mobile767) {
-                    width: 75%;
+                    width: 50%;
                 }
             }
             h1 {
@@ -1245,11 +1265,13 @@ header {
                 }
             }
             a {
-                padding: 8px 18px;
-                font-size: 14px;
+                font: {
+                    size: 14px;
+                    weight: 500;
+                }
                 color: #fff;
+                padding: 8px 18px;
                 border-radius: 5px;
-                font-weight: 500;
                 @include respond($mobile767) {
                     font-size: 12px;
                 }
@@ -1261,9 +1283,9 @@ header {
                 margin-top: 30px;
                 padding-bottom: 35px;
                 .video-signup {
+                    margin-right: 10px;
                     background-color: #00704a;
                     border: 1px solid #00704a;
-                    margin-right: 10px;
                 }
                 .video-login {
                     border: 1px solid #fff;
@@ -1309,9 +1331,9 @@ header {
                 }
             }
             .newsEvent {
-                padding-bottom: 300px;
-                max-width: 1600px;
                 margin: 0 auto;
+                max-width: 1600px;
+                padding-bottom: 300px;
                 & > div {
                     float: left;
                     @include respond($pc1280) {
@@ -1354,9 +1376,9 @@ header {
                             bottom: 150px;
                         }
                         width: 850px;
-                        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
                         border-radius: 100px;
                         background-color: white;
+                        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
                         & > li {
                             margin: {
                                 top: 0px;
@@ -1409,8 +1431,8 @@ header {
                                     size: 55px;
                                     weight: 900;
                                 }
-                                color: $링크서브;
                                 float: left;
+                                color: $링크서브;
                                 text-align: center;
                                 margin-right: 30px;
                                 strong {
@@ -1428,8 +1450,8 @@ header {
                                     weight: 600;
                                 }
                                 display: block;
-                                padding-top: 12px;
                                 color: $링크서브;
+                                padding-top: 12px;
                             }
                             small {
                                 display: block;
@@ -1438,11 +1460,11 @@ header {
                                 white-space: nowrap;
                             }
                             .newsLine {
-                                text-indent: -9999px;
-                                width: 650px;
                                 height: 1px;
-                                background-color: $링크서브;
+                                width: 650px;
                                 margin: 45px 0;
+                                text-indent: -9999px;
+                                background-color: $링크서브;
                                 @include respond($pc1560) {
                                     width: 100%;
                                 }
@@ -1453,11 +1475,11 @@ header {
                         @include pos($bottom: -55px, $left: 600px);
                         width: 150px;
                         height: 150px;
-                        background-color: $링크서브;
+                        font-size: 14px;
+                        transition: 0.5s;
                         border-radius: 30px;
                         transform: rotate(-25deg);
-                        transition: 0.5s;
-                        font-size: 14px;
+                        background-color: $링크서브;
                         &:hover {
                             transform: rotateX(720deg);
                         }
@@ -1481,11 +1503,11 @@ header {
                             }
                         }
                         > a {
-                            display: block;
                             color: white;
+                            display: block;
+                            font-weight: 700;
                             text-align: center;
                             line-height: 150px;
-                            font-weight: 700;
                             @include respond($pc1560) {
                                 color: white;
                                 line-height: 50px;
@@ -1496,28 +1518,28 @@ header {
                 }
                 .event {
                     @include pos($p:relative);
-                    overflow: hidden;
                     float: right;
                     width: 670px;
+                    overflow: hidden;
                     transform: translateY(20%);
                     .bannerBtn {
                         @include pos($top: 40px, $right: 60px);
-                        cursor: pointer;
                         z-index: 1000;
+                        cursor: pointer;
                         .active {
                             border: 1px solid $링크서브;
                             background-color: $링크서브;
                         }
                         li {
-                            width: 15px;
-                            height: 15px;
                             border: 1px solid white {
                                 radius: 50%;
                             }
-                            background-color: white;
+                            width: 15px;
+                            height: 15px;
                             float: left;
                             margin-right: 15px;
                             text-indent: -9999px;
+                            background-color: white;
                         }
                     }
                     .newsBanner {
@@ -1552,11 +1574,11 @@ header {
                             text-align: end;
                         }
                         & > li .content > .line  {
-                            text-indent: -9999px;
                             height: 1px;
                             width: 500px;
-                            background-color: white;
                             margin: 10px 0;
+                            background-color: white;
+                            text-indent: -9999px;
                         }
                         & > li .content > p:nth-of-type(2) {
                             color: white;
@@ -1608,9 +1630,9 @@ footer {
         }
         .footTop {
             display: flex;
+            padding-top: 15px;
             justify-content: space-between;
             border-bottom: 1px solid $설명글자;
-            padding-top: 15px;
             @include respond($mobile767) {
                 flex-wrap: wrap;
             }

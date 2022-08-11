@@ -24,7 +24,7 @@
     <script>
         $(function() {
             //모바일 메뉴 전체화면
-            $('header>.innerBox>.mobileheader>a>').on('click', function(){
+            $('header>.innerBox>.mobileheader>a').on('click', function(){
                 $('.app')
                 .addClass("mobileActive")
                 .siblings();
@@ -56,7 +56,7 @@
             $("#search>.search-header>.btn-close").click(function (e) {
                 $("#search")
                 .addClass("active")
-                    .siblings();
+                .siblings();
             })
 
             //모바일 사람 이미지 클릭시 메뉴 나오도록
@@ -117,43 +117,17 @@
 
             window.addEventListener('scroll', stickMenu);
 
-            //메뉴 호버시 슬라이드 다운 효과
-            $(".item>.item_first").mouseover(function () {
-                $(".contents_first").stop().slideDown(500);
-            })
-            $(".item>.item_first").mouseout(function () {
-                $(".contents_first").stop().slideUp(500);
-            });
-            $(".item>.item_second").mouseover(function () {
-                $(".contents_second").stop().slideDown(500);
-            })
-            $(".item>.item_second").mouseout(function () {
-                $(".contents_second").stop().slideUp(500);
-            });
-            $(".item>.item_third").mouseover(function () {
-                $(".contents_third").stop().slideDown(500);
-            })
-            $(".item>.item_third").mouseout(function () {
-                $(".contents_third").stop().slideUp(500);
-            });
-            $(".item>.item_four").mouseover(function () {
-                $(".contents_four").stop().slideDown(500);
-            })
-            $(".item>.item_four").mouseout(function () {
-                $(".contents_four").stop().slideUp(500);
-            });
-            $(".item>.item_five").mouseover(function () {
-                $(".contents_five").stop().slideDown(500);
-            })
-            $(".item>.item_five").mouseout(function () {
-                $(".contents_five").stop().slideUp(500);
-            });
-            $(".item>.item_six").mouseover(function () {
-                $(".contents_six").stop().slideDown(500);
-            })
-            $(".item>.item_six").mouseout(function () {
-                $(".contents_six").stop().slideUp(500);
-            });
+            // //메뉴 호버시 슬라이드 다운 효과
+            const main = document.querySelectorAll(".main-menu > li");
+
+            for (let i = 0; i < main.length; i++) {
+                $(".item>.item_" + i).mouseover(function () {
+                    $(".contents_" + i).stop().slideDown(450);
+                })
+                $(".item>.item_" + i).mouseout(function () {
+                    $(".contents_" + i).stop().slideUp(450);
+                });
+            }
 
         })
     </script>
@@ -162,8 +136,11 @@
     <ul class="skipMenu">
         <li><a href="#nav">메인메뉴 바로가기</a></li>
     </ul>
-    <header class="clearFix">
+    <!-- ======== header ======== -->
+    <header class="clearFix" data-aos="fade-down">
         <div class="innerBox">
+
+            <!-- ======== mobileheader ======== -->
             <div class="mobileheader">
                 <a href="#void"><i class="fas fa-bars"></i></a>
                 <a href="index.html"><img src="img/logo.png" alt="logo"></a>
@@ -179,24 +156,26 @@
                     <a href="preparing.html">Find a Store</a>
                 </div>
             </div>
+
             <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+
+            <!-- ======== main-menu ======== -->
             <ul class="main-menu">
+
+                <!-- ======== item_1 ======== -->
                 <li class="item">
-                    <div class="item_name item_first">
+                    <div class="item_name item_1">
                         <a href="preparing.html">Coffee</a>
-                        <div class="item_contents contents_first">
+                        <div class="item_contents contents_1">
                             <div class="contents_menu">
                                 <ul class="inner">
-                                    <li>
+                                    <li class="inner1">
                                         <h4><a href="preparing.html">커피</a></h4>
                                         <ul>
                                             <li><a href="preparing.html">스타벅스 원두</a></li>
                                             <li><a href="preparing.html">스타벅스 비아</a></li>
                                             <li><a href="preparing.html">스타벅스 오리가미</a></li>
                                         </ul>
-                                    </li>
-                                    <li>
-                                        <h4><a href="preparing.html">나와 어울리는 커피</a></h4>
                                     </li>
                                     <li>
                                         <h4><a href="preparing.html">스타벅스 리저브 TM</a></h4>
@@ -252,10 +231,12 @@
                         </div>
                     </div>
                 </li>
+
+                <!-- ======== item_2 ======== -->
                 <li class="item">
-                    <div class="item_name item_second">
+                    <div class="item_name item_2">
                         <a href="preparing.html">Menu</a>
-                        <div class="item_contents contents_second">
+                        <div class="item_contents contents_2">
                             <div class="contents_menu">
                                 <ul class="inner">
                                     <li>
@@ -323,10 +304,12 @@
                         </div>
                     </div>
                 </li>
+
+                <!-- ======== item_3 ======== -->
                 <li class="item">
-                    <div class="item_name item_third">
+                    <div class="item_name item_3">
                         <a href="preparing.html">Store</a>
-                        <div class="item_contents contents_third">
+                        <div class="item_contents contents_3">
                             <div class="contents_menu">
                                 <ul class="inner">
                                     <li>
@@ -362,10 +345,12 @@
                         </div>
                     </div>
                 </li>
+
+                <!-- ======== item_4 ======== -->
                 <li class="item">
-                    <div class="item_name item_four">
+                    <div class="item_name item_4">
                         <a href="preparing.html">Responsibility</a>
-                        <div class="item_contents contents_four">
+                        <div class="item_contents contents_4">
                             <div class="contents_menu">
                                 <ul class="inner">
                                     <li>
@@ -417,10 +402,12 @@
                         </div>
                     </div>
                 </li>
+
+                <!-- ======== item_5 ======== -->
                 <li class="item">
-                    <div class="item_name item_five">
+                    <div class="item_name item_5">
                         <a href="preparing.html">My Starbucks Rewards</a>
-                        <div class="item_contents contents_five">
+                        <div class="item_contents contents_5">
                             <div class="contents_menu">
                                 <ul class="inner">
                                     <li>
@@ -452,6 +439,12 @@
                                             <li><a href="preparing.html">자주 하는 질문</a></li>
                                         </ul>
                                     </li>
+                                    <li>
+                                        <h4><a href="preparing.html">스타벅스 신규 Reward</a></h4>
+                                    </li>
+                                    <li>
+                                        <h4><a href="preparing.html">스타벅스 2022 Reward</a></h4>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="contents_texture">
@@ -463,10 +456,12 @@
                         </div>
                     </div>
                 </li>
+
+                <!-- ======== item_6 ======== -->
                 <li class="item">
-                    <div class="item_name item_six">
+                    <div class="item_name item_6">
                         <a href="preparing.html">What's New</a>
-                        <div class="item_contents contents_six">
+                        <div class="item_contents contents_6">
                             <div class="contents_menu">
                                 <ul class="inner">
                                     <li>
@@ -514,18 +509,23 @@
                         </div>
                     </div>
                 </li>
+
+                <!-- ======== headerIcon ======== -->
                 <li class="headerIcon">
                     <a href="#void"><i class="fas fa-search"></i></a>
                     <a href="preparing.html"><i class="fa-solid fa-cart-shopping"></i></a>
                     <a class="Icon_last" href="#void"><i class="fa-solid fa-user-large"></i></a>
                 </li>
             </ul>
+
+            <!-- ======== header_UserBox ======== -->
             <div class="header_UserBox">
                 <a href="login.html">Sign In</a>
                 <a href="login.html">My Starbucks</a>
                 <a href="preparing.html">Customer Service & Ideas</a>
                 <a href="preparing.html">Find a Store</a>
             </div>
+
         </div>
     </header>
     <div id="search" class="active">

@@ -50,29 +50,36 @@ header {
     @include respond($pc1024) {
         padding: 10px 0;
     }
-    &:hover>.innerBox>.main-menu>.item>.item_name>a {
+    &:hover > .innerBox > .main-menu > .item > .item_name > a {
         color: #333;
     }
     &.sticky {
         background: #fff;
         border-bottom: 1px solid #e5e5e5;
         padding: 10px 0;
-        &>.innerBox>nav>#nav>li>a {
+        & > .innerBox > nav > #nav > li > a {
             color: #333;
         }
-        &>.innerBox>.mobileheader>a, &>.innerBox>.mobileheader>div>a, &>.innerBox>.main-menu>.item>.item_name>a, &>.innerBox>.main-menu>.headerIcon>a {
+        & > .innerBox > .mobileheader > a,
+        & > .innerBox > .mobileheader > div > a,
+        & > .innerBox > .main-menu > .item > .item_name > a,
+        & > .innerBox > .main-menu > .headerIcon > a {
             color: #333;
         }
-        &>.innerBox>.main-menu>.item>.item_name {
-            padding: 27.5px 15px 22.5px;
+        & > .innerBox > .main-menu > .item > .item_name {
+            padding: {
+                top: 27.5px;
+                right: 15px;
+                bottom: 22.5px;
+            }
         }
-        &>.innerBox>.main-menu>.item>.item_contents {
+        & > .innerBox > .main-menu > .item > .item_contents {
             top: 95px;
         }
-        &>.innerBox>.header_UserBox {
+        & > .innerBox > .header_UserBox {
             top: 75px;
         }
-        &>.innerBox>.mobileheader>.Mobile_UserBox {
+        & > .innerBox > .mobileheader > .Mobile_UserBox {
             top: 50px;
         }
     }
@@ -80,7 +87,11 @@ header {
         background: #fff;
         border-bottom: 1px solid #e5e5e5;
     }
-    &:hover>.innerBox>nav>#nav>li>a, &:hover>.innerBox>.mobileheader>a, &:hover>.innerBox>.mobileheader>div>a, &:hover>.innerBox>.main-menu>.item>.item_name, &:hover>.innerBox>.main-menu>.headerIcon>a{
+    &:hover > .innerBox > nav > #nav > li > a,
+    &:hover > .innerBox > .mobileheader > a,
+    &:hover > .innerBox > .mobileheader > div > a,
+    &:hover > .innerBox > .main-menu > .item > .item_name,
+    &:hover > .innerBox > .main-menu > .headerIcon > a {
         color: #333;
     }
     .innerBox {
@@ -102,9 +113,6 @@ header {
                 transition: all 0.6s ease;
                 &:hover {
                     color: $링크서브;
-                }
-                i {
-
                 }
             }
             a {
@@ -142,11 +150,13 @@ header {
                     width: 175px;
                 }
                 a {
+                    font: {
+                        size: 1em;
+                        weight: 500;
+                    }
                     padding: 5px 0;
                     display: flex;
-                    font-size: 1em;
                     color: #333;
-                    font-weight: 500;
                     &:hover {
                         color: $링크서브;
                         text-decoration: underline;
@@ -179,19 +189,26 @@ header {
             @include respond($pc1024) {
                 display: none;
             }
-            &>.item>.item_name>a, &>.headerIcon>a {
+            & > .item > .item_name > a,
+            & > .headerIcon > a {
                 color: #fff;
             }
             .item {
                 .item_name {
-                    padding: 27.5px 15px 32.5px;
+                    padding: {
+                        top: 27.5px;
+                        right: 15px;
+                        bottom: 32.5px;
+                    }
                     @include respond($pc1420) {
                         padding-right: 0px;
                     }
-                    >a {
-                        font-size: 20px;
-                        font-weight: 600;
-                        font-family: 'Lato', sans-serif;
+                    > a {
+                        font: {
+                            size: 20px;
+                            weight: 600;
+                            family: 'Lato', sans-serif;
+                        }
                         &:hover {
                             color: $링크서브;
                             text-decoration: underline;
@@ -207,7 +224,7 @@ header {
                         display: none;
                         .contents_menu {
                             background-color:#1e3932;
-                            >.inner {
+                            > .inner {
                                 max-width: 1100px;
                                 margin: 0 auto;
                                 display: flex;
@@ -217,10 +234,15 @@ header {
                                 @include respond($pc1420) {
                                     padding-left: 2%;
                                 }
-                                >li {
+                                > li {
                                     width: calc(100%/6);
                                     h4 {
-                                        padding: 3px 0 12px 0;
+                                        padding: {
+                                            top: 3px;
+                                            right: 0;
+                                            bottom: 12px;
+                                            left: 0px;
+                                        }
                                         &:hover>a {
                                             text-decoration: underline;
                                         }
@@ -294,7 +316,7 @@ header {
                     &:hover {
                         color: $링크서브;
                     }
-                }`
+                }
                 .Icon_last {
                     padding-bottom: 15px;
                 }
@@ -319,11 +341,13 @@ header {
                 margin-left: 9999px;
             }
             a {
+                font: {
+                    size: 1em;
+                    weight: 500;
+                }
                 padding: 5px 0;
                 display: flex;
-                font-size: 1em;
                 color: #333;
-                font-weight: 500;
                 &:hover {
                     color: $링크서브;
                     text-decoration: underline;
