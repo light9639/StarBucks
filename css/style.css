@@ -676,20 +676,14 @@ header .innerBox .bg1 {
   }
 }
 #mainBanner .main_indicator div svg {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   cursor: pointer;
 }
 #mainBanner .main_indicator div svg:hover path {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0.5;
-}
-@media screen and (max-width: 1420px) {
-  #mainBanner .main_indicator div svg {
-    width: 75px;
-    height: 75px;
-  }
 }
 #mainBanner .main_indicator div svg path {
   stroke: #fff;

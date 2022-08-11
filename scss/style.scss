@@ -634,16 +634,12 @@ header {
                 top: 37.5%;
             }
             svg {
-                width: 100px;
-                height: 100px;
+                width: 75px;
+                height: 75px;
                 cursor: pointer;
                 &:hover path {
                     transition: .5s;
                     opacity: .5;
-                }
-                @include respond($pc1420) {
-                    width: 75px;
-                    height: 75px;
                 }
                 path {
                     stroke: #fff;
