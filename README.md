@@ -1,7 +1,7 @@
 # StarBucks 프로젝트 소개
 바로가기 https://light9639.github.io/StarBucks/
 
-![화면 캡처 2022-08-22](https://user-images.githubusercontent.com/97826223/182018484-9c2dd38f-0404-4a21-b381-c63895b0b5db.png)
+![화면 캡처 2022-08-22](https://raw.githubusercontent.com/light9639/StarBucks/main/img/light9639.github.io_StarBucks_.png)
 스타벅스 리뉴얼 포트폴리오 사이트입니다.
 
 # 개발인원및 기간
