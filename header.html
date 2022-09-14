@@ -1,98 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Starbucks">
-    <meta property="og:url"	content="https://www.starbucks.co.kr/">
+    <meta property="og:url" content="https://www.starbucks.co.kr/">
     <meta property="og:image" content="https://image.istarbucks.co.kr/common/img/kakaotalk.png">
     <meta property="og:description" content="Starbucks">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STAR BUCKS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="shortcut icon" href="img/logo.png">
     <link rel="stylesheet" href="css/link.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jqFuwatto.umd.js"></script>
     <script>
-        $(function() {
+        $(function () {
             //모바일 메뉴 전체화면
-            $('header>.innerBox>.mobileheader>a').on('click', function(){
+            $('header>.innerBox>.mobileheader>a').on('click', function () {
                 $('.app')
-                .addClass("mobileActive")
-                .siblings();
+                    .addClass("mobileActive")
+                    .siblings();
             });
-            $('.app>.sidebar>div>i').on('click', function(){
+            $('.app>.sidebar>div>i').on('click', function () {
                 $('.app')
-                .removeClass("mobileActive")
-                .siblings();
+                    .removeClass("mobileActive")
+                    .siblings();
             });
 
             //검색창 클릭시 검색창 나오게
             $("header>.innerBox>.main-menu>.headerIcon>a:first-child").click(function (e) {
                 $("#search")
-                .removeClass("active")
-                .siblings();
+                    .removeClass("active")
+                    .siblings();
             })
             $("#search>.search-header>.btn-close").click(function (e) {
                 $("#search")
-                .addClass("active")
+                    .addClass("active")
                     .siblings();
             })
 
             //헤더 검색창 클릭시 검색창 나오게
             $("header>.innerBox>.mobileheader>.MobileIcon>a:first-child").click(function (e) {
                 $("#search")
-                .removeClass("active")
-                .siblings();
+                    .removeClass("active")
+                    .siblings();
             })
             $("#search>.search-header>.btn-close").click(function (e) {
                 $("#search")
-                .addClass("active")
-                .siblings();
+                    .addClass("active")
+                    .siblings();
             })
 
             //모바일 사람 이미지 클릭시 메뉴 나오도록
-            $(".Icon_last").hover(function(){
+            $(".Icon_last").hover(function () {
                 $(".Mobile_UserBox").addClass("bg");
-            }, function(){
+            }, function () {
                 $(".Mobile_UserBox").removeClass("bg");
             })
-            $(".Mobile_UserBox").hover(function(){
+            $(".Mobile_UserBox").hover(function () {
                 $(this).addClass("bg");
-            }, function(){
+            }, function () {
                 $(this).removeClass("bg");
             })
 
             //모바일 화면 나오게 만들기
-            $('.mobileheader>a>i').click(function(){
+            $('.mobileheader>a>i').click(function () {
                 $('body').toggleClass('menu-open');
             })
 
             //헤더 사람 이미지 클릭시 메뉴 나오도록
-            $(".headerIcon>.Icon_last").hover(function(){
+            $(".headerIcon>.Icon_last").hover(function () {
                 $(".header_UserBox").addClass("bg1");
-            }, function(){
+            }, function () {
                 $(".header_UserBox").removeClass("bg1");
             })
-            $(".header_UserBox").hover(function(){
+            $(".header_UserBox").hover(function () {
                 $(this).addClass("bg1");
-            }, function(){
+            }, function () {
                 $(this).removeClass("bg1");
             })
 
             //검색창 클릭시 2자 이상 입력
-            $('form[name="search_form"]').on('submit', function(e){
+            $('form[name="search_form"]').on('submit', function (e) {
                 var keyword = $('input[name="s"]', this).val();
 
-                if ( keyword.split(' ').join('')  == '' || keyword.split(' ').join('').length < 2 ) {
+                if (keyword.split(' ').join('') == '' || keyword.split(' ').join('').length < 2) {
                     alert('검색어를 2자 이상 입력해주세요.');
                     e.preventDefault();
                     return false;
@@ -104,11 +108,11 @@
             //스크롤 탑 내리면 나오게
             const nav = document.querySelector('header');
 
-            function stickMenu(){
+            function stickMenu() {
                 let winYPos = window.pageYOffset;
                 let navElePos = nav.offsetTop;
 
-                if(winYPos > navElePos) {
+                if (winYPos > navElePos) {
                     nav.classList.add('sticky');
                 } else {
                     nav.classList.remove('sticky');
@@ -116,6 +120,24 @@
             }
 
             window.addEventListener('scroll', stickMenu);
+
+            /**
+             * ? 스크롤을 내렸을때 #header의 CSS 속성중 top 값을 -100px로 변경했다가 제거한다.
+             */
+            var lastScrollTop = 0, delta = 15;
+
+            $(window).scroll(function (e) {
+                var st = $(this).scrollTop();
+
+                if (Math.abs(lastScrollTop - st) <= delta)
+                    return;
+                if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+                    $("header").css("top", "-100px");
+                } else {
+                    $("header").css("top", "0px");
+                }
+                lastScrollTop = st;
+            });
 
             // //메뉴 호버시 슬라이드 다운 효과
             const main = document.querySelectorAll(".main-menu > li");
@@ -132,6 +154,7 @@
         })
     </script>
 </head>
+
 <body>
     <ul class="skipMenu">
         <li><a href="#nav">메인메뉴 바로가기</a></li>
@@ -537,4 +560,5 @@
         </div>
     </div>
 </body>
+
 </html>
