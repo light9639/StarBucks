@@ -621,11 +621,13 @@ header .innerBox .bg1 {
     font-size: 3em;
   }
 }
-#mainBanner .innerBox .mainText .main_text3, #mainBanner .innerBox .mainText .main_text4 {
+#mainBanner .innerBox .mainText .main_text3,
+#mainBanner .innerBox .mainText .main_text4 {
   font-size: 1.25em;
 }
 @media screen and (max-width: 1024px) {
-  #mainBanner .innerBox .mainText .main_text3, #mainBanner .innerBox .mainText .main_text4 {
+  #mainBanner .innerBox .mainText .main_text3,
+#mainBanner .innerBox .mainText .main_text4 {
     font-size: 1em;
   }
 }
@@ -668,7 +670,7 @@ header .innerBox .bg1 {
 #mainBanner .main_indicator div {
   position: absolute;
   top: 45%;
-  z-index: 100;
+  z-index: 90;
 }
 @media screen and (max-width: 1420px) {
   #mainBanner .main_indicator div {
@@ -1043,7 +1045,8 @@ header .innerBox .bg1 {
     font-size: 2em;
   }
 }
-#container .lifeStyle .innerBox .Style_box .Style_text1, #container .lifeStyle .innerBox .Style_box .Style_text2 {
+#container .lifeStyle .innerBox .Style_box .Style_text1,
+#container .lifeStyle .innerBox .Style_box .Style_text2 {
   color: #fff;
   font-weight: 500;
   padding-bottom: 10px;
@@ -1829,7 +1832,8 @@ footer .innerBox .footTop ul li a img {
   width: 20px;
   padding-left: 5px;
 }
-footer .innerBox .footBottom > ul > li, footer .innerBox .footBottom p {
+footer .innerBox .footBottom > ul > li,
+footer .innerBox .footBottom p {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
